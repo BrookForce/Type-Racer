@@ -1,0 +1,64 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.Master.vb" Inherits="type_machine.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <link rel="stylesheet" href="App_Themes/Theme1/assets/styles.css">
+    <script src="App_Themes/Theme1/assets/js.js" defer></script>
+    <title>Type Machine</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                <div class="logo">
+                    <span class="icon fa-keyboard"></span>
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <h1>Type Machine</h1>
+                        <p>Made by Lucas Ribeiro & Rodrigo Ornelas</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="horizontal" StaticMenuItemStyle-HorizontalPadding="50px"></asp:Menu>
+                        <asp:SiteMapDataSource runat="server" ID="SiteMapDataSource1" ShowStartingNode="false"></asp:SiteMapDataSource> 
+                    </ul>
+                </nav>
+            </header>          
+            <!-- Main -->
+            <div id="main">                
+            </div>           
+            <!-- Footer -->
+            <footer id="footer">
+                <br />
+                <br />
+                <br />
+                <div>
+                <asp:ContentPlaceHolder ID="type" runat="server"></asp:ContentPlaceHolder> 
+                <asp:ContentPlaceHolder ID="sobre" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="support" runat="server"></asp:ContentPlaceHolder>
+                </div> 
+                <br />
+                <br />
+                <br />
+                <p class="copyright">&copy; V.1.5</p>
+            </footer>
+        </div>
+        <!-- BG -->
+        <div id="bg"></div>
+        <!-- Scripts -->
+        <script src="App_Themes/Theme1/assets/js/jquery.min.js"></script>
+        <script src="App_Themes/Theme1/assets/js/jquery.scrollex.min.js"></script>
+        <script src="App_Themes/Theme1/assets/js/jquery.scrolly.min.js"></script>
+        <script src="App_Themes/Theme1/assets/js/browser.min.js"></script>
+        <script src="App_Themes/Theme1/assets/js/breakpoints.min.js"></script>
+        <script src="App_Themes/Theme1/assets/js/util.js"></script>
+        <script src="App_Themes/Theme1/assets/js/main.js"></script>
+    </form>
+</body>
+</html>
